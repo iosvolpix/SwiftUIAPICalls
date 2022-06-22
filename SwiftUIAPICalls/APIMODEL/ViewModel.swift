@@ -30,7 +30,7 @@ class ViewModel: ObservableObject {
         }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else {
-              return
+              return 
             } // Convert to JSON
             do {
                 let food = try JSONDecoder().decode(Food.self, from: data)

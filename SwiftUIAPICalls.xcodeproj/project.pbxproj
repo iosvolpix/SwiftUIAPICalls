@@ -56,8 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				998DCDDD286281AE00D574D0 /* APIMODEL */,
-				998DCDCD2861F76700D574D0 /* SwiftUIAPICallsApp.swift */,
+				99FF2D692862B48700BEAB8D /* VIEW */,
 				998DCDCF2861F76700D574D0 /* ContentView.swift */,
+				998DCDDE2862867400D574D0 /* RatingView.swift */,
 				998DCDD12861F76900D574D0 /* Assets.xcassets */,
 				998DCDD32861F76900D574D0 /* Preview Content */,
 			);
@@ -75,10 +76,17 @@
 		998DCDDD286281AE00D574D0 /* APIMODEL */ = {
 			isa = PBXGroup;
 			children = (
+				998DCDCD2861F76700D574D0 /* SwiftUIAPICallsApp.swift */,
 				998DCDDB2862226300D574D0 /* ViewModel.swift */,
-				998DCDDE2862867400D574D0 /* RatingView.swift */,
 			);
 			path = APIMODEL;
+			sourceTree = "<group>";
+		};
+		99FF2D692862B48700BEAB8D /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIEW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

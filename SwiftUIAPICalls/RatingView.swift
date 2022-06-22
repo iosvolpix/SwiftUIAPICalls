@@ -10,7 +10,6 @@ import SwiftUI
 struct RatingView: View {
     
     @Binding var rating: Int
-    
     @Binding var label: String
     
     var maximumRating = 5
@@ -51,5 +50,6 @@ struct RatingView: View {
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
         RatingView(rating: .constant(3), label: .constant("3.2"))
+            
     }
 }
