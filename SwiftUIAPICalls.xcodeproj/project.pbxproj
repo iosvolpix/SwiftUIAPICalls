@@ -59,7 +59,6 @@
 				99FF2D692862B48700BEAB8D /* VIEW */,
 				998DCDCF2861F76700D574D0 /* ContentView.swift */,
 				998DCDDE2862867400D574D0 /* RatingView.swift */,
-				998DCDD12861F76900D574D0 /* Assets.xcassets */,
 				998DCDD32861F76900D574D0 /* Preview Content */,
 			);
 			path = SwiftUIAPICalls;
@@ -68,6 +67,7 @@
 		998DCDD32861F76900D574D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				998DCDD12861F76900D574D0 /* Assets.xcassets */,
 				998DCDD42861F76900D574D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";

@@ -45,7 +45,7 @@ class ViewModel: ObservableObject {
             }
         
         task.resume()
-    }
+    }// func
     
-}
+}//class
 
