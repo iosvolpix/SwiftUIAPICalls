@@ -19,12 +19,12 @@ struct RatingView: View {
     
     var offColor = Color.gray
     var onColor = Color.yellow
+
     
     var body: some View {
         
         HStack {
             
-
             ForEach(1..<maximumRating + 1, id: \.self) { number in
                 image(for: number)
                     .foregroundColor(number > rating ? offColor : onColor)

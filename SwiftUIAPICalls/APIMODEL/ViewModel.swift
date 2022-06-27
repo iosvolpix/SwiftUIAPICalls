@@ -24,14 +24,19 @@ struct Food: Hashable, Codable {
 class ViewModel: ObservableObject {
     @Published var food = Food()
     
+    // GET, POST , PUT , DELETE, etc. = PEGUE, PUBLICAR , EXCLUIR, etc.
     func fetch() {
         guard let url = URL(string: "https://hotmart-mobile-app.herokuapp.com/locations") else {
             return
         }
+        
+        // MAKE THE REQUEST = FAÇA O PEDIDO
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else {
-              return 
-            } // Convert to JSON
+              return
+                
+                
+            } // CONVERT TO JSON = CONVERTER PARA JSON
             do {
                 let food = try JSONDecoder().decode(Food.self, from: data)
                 
@@ -45,6 +50,7 @@ class ViewModel: ObservableObject {
             }
         
         task.resume()
+        
     }// func
     
 }//class

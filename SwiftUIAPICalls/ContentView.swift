@@ -34,18 +34,23 @@ struct ContentView: View {
                                       .fontWeight(.bold)
                                       .frame(width: 130, alignment: .leading)
                                       .foregroundColor(.blue)
+                                      .padding(20)
                                 
                                   Text(location.type)
                                       .font(.subheadline)
                                       .frame(width: 130, alignment: .leading)
                                       .foregroundColor(.gray)
+                                      .padding(10)
+                                            
                                     
                                         }// VStack
                                 
                                 } // HStack
-                                .background(Color.gray.opacity(0.10).edgesIgnoringSafeArea(.all))
+                                .background(Color.gray.opacity(0.09).edgesIgnoringSafeArea(.all))
                                 .cornerRadius(20)
                                 .navigationBarTitle("HOME")
+                                .padding()
+                                
                             }
                             } //ForEach
                         }//ScrollView
