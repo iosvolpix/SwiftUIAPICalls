@@ -13,7 +13,7 @@ struct Place: Hashable, Codable {
     let type: String
     let id: Int
     let about: String
-    let schedule: [OpeningTime]
+    let schedule: [Schedule]
     let phone: String
     let adress: String
 }
@@ -31,13 +31,32 @@ struct Schedule: Hashable, Codable {
 struct OpeningTime: Hashable, Codable {
     let open: String
     let closed: String
+
 }
 
 
 func fetch() async {
-    guard URL(string: "https://hotmart-mobile-app.herokuapp.com/locations/1") != nil else {
+    guard let url = URL(string: "https://hotmart-mobile-app.herokuapp.com/locations/1") else {
         print("Invalid URL")
         return
+    
     }
     
-}
+// MAKE THE REQUEST = FAÇA O PEDIDO
+    _ = URLSession.shared.dataTask(with: url) {[] data,  _, error in
+    guard let data = data, error == nil else {
+      return
+        
+    } // CONVERT TO JSON = CONVERTER PARA JSON
+    do {
+        _ = try JSONDecoder().decode(Place.self, from: data)
+        
+        DispatchQueue.main.async {
+            
+        }
+    }
+    catch {
+        print(error)
+    }
+    }
+} // func
