@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//     LUGAR
 struct Place: Hashable, Codable {
     let name: String
     let review: Double
@@ -16,8 +16,9 @@ struct Place: Hashable, Codable {
     let schedule: [Schedule]
     let phone: String
     let adress: String
+    
 }
-
+//     HORARIO
 struct Schedule: Hashable, Codable {
     let sunday: OpeningTime
     let monday: OpeningTime
@@ -27,19 +28,22 @@ struct Schedule: Hashable, Codable {
     let friday: OpeningTime
     let saturday: OpeningTime
 }
-
+//     HORARIO DE ABERTURA
 struct OpeningTime: Hashable, Codable {
     let open: String
     let closed: String
 
 }
 
+class PlaceAPI: ObservableObject {
+@Published var place = [Place]()
 
 func fetch() async {
     guard let url = URL(string: "https://hotmart-mobile-app.herokuapp.com/locations/1") else {
         print("Invalid URL")
+        
         return
-    
+     
     }
     
 // MAKE THE REQUEST = FAÇA O PEDIDO
@@ -51,12 +55,10 @@ func fetch() async {
     do {
         _ = try JSONDecoder().decode(Place.self, from: data)
         
-        DispatchQueue.main.async {
-            
-        }
     }
     catch {
         print(error)
     }
     }
 } // func
+} // struct
