@@ -41,7 +41,8 @@ struct PlaceView: View {
                     Image(String(place.id))
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 156, height: 208, alignment: .leading)
+                        .offset(y: -130)
+
                     Text(place.name)
                         .font(.subheadline)
                         .fontWeight(.bold)
@@ -53,10 +54,22 @@ struct PlaceView: View {
                         .frame(width: 130, alignment: .leading)
                         .foregroundColor(.gray)
                         .padding(10)
+                    
+                    Text(place.about)
+                        .font(.subheadline)
+                        .foregroundColor(.red)
+                  
+                    Text(place.phone)
+                        .font(.subheadline)
+                    
+                    Text(place.adress)
+                        .font(.subheadline)
+                    
+                    
                 } // VStack
             } // HStack
-            .background(Color.gray.opacity(0.09).edgesIgnoringSafeArea(.all))
-            .cornerRadius(20)
+            .background(Color.white.opacity(0.09).edgesIgnoringSafeArea(.all))
+            .cornerRadius(10)
             .padding()
         } else {
             // Enquanto não carregar mostra esse texto

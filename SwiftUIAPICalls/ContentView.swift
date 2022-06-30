@@ -31,29 +31,26 @@ struct ContentView: View {
                                     
                                     Image(String(location.id))
                                         .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 156, height: 208, alignment: .leading)
+                                        .frame(width: 200, height: 200)
                                     
                                     
                                     Text(location.name)
-                                        .font(.subheadline)
-                                        .fontWeight(.bold)
-                                        .frame(width: 130, alignment: .leading)
-                                        .foregroundColor(.blue)
-                                        .padding(20)
+                                        .font(.headline)
+                                        .frame(width: 150, alignment: .leading)
                                     
                                     Text(location.type)
                                         .font(.subheadline)
-                                        .frame(width: 130, alignment: .leading)
+                                        .frame(width: 150, alignment: .leading)
                                         .foregroundColor(.gray)
-                                        .padding(10)
+                                        .padding()
                                     
                                     
                                 }// VStack
+                                .background(Color.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 24.0))
+                                .shadow(radius: 5)
                                 
                             } // HStack
-                            .background(Color.gray.opacity(0.09).edgesIgnoringSafeArea(.all))
-                            .cornerRadius(20)
                             .navigationBarTitle("HOME")
                             .padding()
                             .onTapGesture { // CAPTURA O TOQUE NO CARD

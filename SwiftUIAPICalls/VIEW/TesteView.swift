@@ -9,7 +9,34 @@ import SwiftUI
 
 struct TesteView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                
+                Image("3")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .offset(y: -150)
+                    
+                    
+                    
+                Text("Obrigatorio")
+                    .font(.title)
+                    .font(.subheadline)
+                    .foregroundColor(.blue)
+                    .padding()
+                
+                Text("Comentario")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                    .padding()
+                
+            }// VStack
+            .background(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 24.0))
+            .shadow(radius: 8)
+            .padding()
+        } // HStack
+        
     }
 }
 
