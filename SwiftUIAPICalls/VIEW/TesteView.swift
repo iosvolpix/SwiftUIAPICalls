@@ -14,27 +14,24 @@ struct TesteView: View {
                 
                 Image("3")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .offset(y: -150)
-                    
-                    
-                    
+                    .scaledToFit()
+                
                 Text("Obrigatorio")
-                    .font(.title)
-                    .font(.subheadline)
+                    .font(.headline)
                     .foregroundColor(.blue)
+                    .frame(width: 150, alignment: .leading)
+                    .foregroundColor(.gray)
                     .padding()
                 
                 Text("Comentario")
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                    .frame(width: 150, alignment: .leading)
+                    .foregroundColor(.gray)
                     .padding()
                 
             }// VStack
-            .background(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 24.0))
-            .shadow(radius: 8)
-            .padding()
+         
         } // HStack
         
     }

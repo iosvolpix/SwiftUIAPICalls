@@ -38,32 +38,28 @@ struct PlaceView: View {
             // Quando carregado mostra essa view
             HStack {
                 VStack {
-                    Image(String(place.id))
+                    Image(String(place.id)) // IMAGEM
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .offset(y: -130)
 
-                    Text(place.name)
+                    Text(place.name) // NOME PRICINPAL
                         .font(.subheadline)
-                        .fontWeight(.bold)
-                        .frame(width: 130, alignment: .leading)
                         .foregroundColor(.blue)
-                        .padding(20)
-                    Text(place.type)
-                        .font(.subheadline)
-                        .frame(width: 130, alignment: .leading)
-                        .foregroundColor(.gray)
-                        .padding(10)
+                        .frame(width: 150, alignment: .leading)
+                        .padding()
                     
-                    Text(place.about)
+                    Text(place.about) // SOBRE
                         .font(.subheadline)
-                        .foregroundColor(.red)
+                        .padding()
                   
-                    Text(place.phone)
+                    Text(place.phone) // TELEFONE
                         .font(.subheadline)
+                        .padding()
                     
-                    Text(place.adress)
+                    Text(place.adress) // ENDEREÇO
                         .font(.subheadline)
+                        .padding()
                     
                     
                 } // VStack
