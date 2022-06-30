@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//     LUGAR
+
 struct Place: Hashable, Codable {
     let name: String
     let review: Double
@@ -16,9 +16,8 @@ struct Place: Hashable, Codable {
     let schedule: [Schedule]
     let phone: String
     let adress: String
-    
 }
-//     HORARIO
+
 struct Schedule: Hashable, Codable {
     let sunday: OpeningTime
     let monday: OpeningTime
@@ -28,37 +27,39 @@ struct Schedule: Hashable, Codable {
     let friday: OpeningTime
     let saturday: OpeningTime
 }
-//     HORARIO DE ABERTURA
+
 struct OpeningTime: Hashable, Codable {
     let open: String
-    let closed: String
+    let close: String
 
 }
 
 class PlaceAPI: ObservableObject {
-@Published var place = [Place]()
-
-func fetch() async {
-    guard let url = URL(string: "https://hotmart-mobile-app.herokuapp.com/locations/1") else {
-        print("Invalid URL")
-        
-        return
-     
-    }
+    @Published var place: Place?
     
-// MAKE THE REQUEST = FAÇA O PEDIDO
-    _ = URLSession.shared.dataTask(with: url) {[] data,  _, error in
-    guard let data = data, error == nil else {
-      return
+    func fetch(id: Int) { // ID passado para carregar o place
+        guard let url = URL(string: "https://hotmart-mobile-app.herokuapp.com/locations/\(id)") // Colocamos o id na url
+        else {
+            print("Invalid URL")
+            return
+        }
         
-    } // CONVERT TO JSON = CONVERTER PARA JSON
-    do {
-        _ = try JSONDecoder().decode(Place.self, from: data)
+        // MAKE THE REQUEST = FAÇA O PEDIDO
+        let task = URLSession.shared.dataTask(with: url) {[] data, _, error in
+            guard let data = data, error == nil else {
+                return
+            } // CONVERT TO JSON = CONVERTER PARA JSON
+            do {
+                let place = try JSONDecoder().decode(Place.self, from: data)
+                DispatchQueue.main.async {
+                    self.place = place
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
         
-    }
-    catch {
-        print(error)
-    }
-    }
-} // func
+        task.resume()
+    } // func
 } // struct

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99574B79286DFA0000773E3E /* TesteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99574B78286DFA0000773E3E /* TesteView.swift */; };
 		9979E50C286B480E009355D2 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979E50B286B480E009355D2 /* PlaceView.swift */; };
 		998DCDCE2861F76700D574D0 /* SwiftUIAPICallsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998DCDCD2861F76700D574D0 /* SwiftUIAPICallsApp.swift */; };
 		998DCDD02861F76700D574D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998DCDCF2861F76700D574D0 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99574B78286DFA0000773E3E /* TesteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteView.swift; sourceTree = "<group>"; };
 		9979E50B286B480E009355D2 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		998DCDCA2861F76700D574D0 /* SwiftUIAPICalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAPICalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		998DCDCD2861F76700D574D0 /* SwiftUIAPICallsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAPICallsApp.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				9979E50B286B480E009355D2 /* PlaceView.swift */,
+				99574B78286DFA0000773E3E /* TesteView.swift */,
 			);
 			path = VIEW;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				9979E50C286B480E009355D2 /* PlaceView.swift in Sources */,
 				998DCDD02861F76700D574D0 /* ContentView.swift in Sources */,
 				998DCDDC2862226300D574D0 /* ViewModel.swift in Sources */,
+				99574B79286DFA0000773E3E /* TesteView.swift in Sources */,
 				998DCDCE2861F76700D574D0 /* SwiftUIAPICallsApp.swift in Sources */,
 				998DCDDF2862867400D574D0 /* RatingView.swift in Sources */,
 				998DE4042869FAD900438682 /* PlaceAPI.swift in Sources */,

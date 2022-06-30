@@ -8,58 +8,75 @@
 import SwiftUI
 
 struct ContentView: View {
-   @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel = ViewModel()
+    @State private var present: Bool = false
+    @State private var id: Int = .zero
     
     var body: some View {
         
         NavigationView {
-
-                        ScrollView {
-                            
-                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
-                                
-                            ForEach(viewModel.food.listLocations, id: \.self) { location in
             
-                                HStack {
-                                        VStack {
-                                      
-                                  Image(String(location.id))
-                                      .resizable()
-                                      .aspectRatio(contentMode: .fit)
-                                      .frame(width: 156, height: 208, alignment: .leading)
-                                      
-                                  
-                                  Text(location.name)
-                                      .font(.subheadline)
-                                      .fontWeight(.bold)
-                                      .frame(width: 130, alignment: .leading)
-                                      .foregroundColor(.blue)
-                                      .padding(20)
-                                
-                                  Text(location.type)
-                                      .font(.subheadline)
-                                      .frame(width: 130, alignment: .leading)
-                                      .foregroundColor(.gray)
-                                      .padding(10)
-                                            
-                                    
-                                        }// VStack
-                                
-                                } // HStack
-                                .background(Color.gray.opacity(0.09).edgesIgnoringSafeArea(.all))
-                                .cornerRadius(20)
-                                .navigationBarTitle("HOME")
-                                .padding()
-                                
-                            }
-                            } //ForEach
-                        }//ScrollView
+            // APRESENTA A PLACEVIEW QUANDO PRESENT FOR TRUE
+            // PASSA O ID DO PLACE SELECIONADO PARA A PLACE VIEW
+            NavigationLink(destination: PlaceView(id: id), isActive: $present) {
                 
-        }// NavigationView
-            .navigationTitle("Home")
-            .onAppear() {
-                viewModel.fetch()
+                ScrollView {
+                    
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                        
+                        ForEach(viewModel.food.listLocations, id: \.self) { location in
+                            
+                            HStack {
+                                VStack {
+                                    
+                                    Image(String(location.id))
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 156, height: 208, alignment: .leading)
+                                    
+                                    
+                                    Text(location.name)
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 130, alignment: .leading)
+                                        .foregroundColor(.blue)
+                                        .padding(20)
+                                    
+                                    Text(location.type)
+                                        .font(.subheadline)
+                                        .frame(width: 130, alignment: .leading)
+                                        .foregroundColor(.gray)
+                                        .padding(10)
+                                    
+                                    
+                                }// VStack
+                                
+                            } // HStack
+                            .background(Color.gray.opacity(0.09).edgesIgnoringSafeArea(.all))
+                            .cornerRadius(20)
+                            .navigationBarTitle("HOME")
+                            .padding()
+                            .onTapGesture { // CAPTURA O TOQUE NO CARD
+                                id = location.id
+                                present = true
+                            }
+                            
+                            
+                            
+                            
+                        }
+                    } //ForEach
+                }//ScrollView
             }
+            
+        }// NavigationView
+        .navigationTitle("Home")
+        .onAppear() {
+            viewModel.fetch()
+        }
+        .background {
+            
+        }
     }// var body
 }// struct
 
