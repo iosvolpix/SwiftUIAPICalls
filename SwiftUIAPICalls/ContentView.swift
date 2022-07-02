@@ -11,9 +11,13 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     @State private var present: Bool = false
     @State private var id: Int = .zero
+    @State private var rating2 = 3
+    @State private var label1 = "3.5"
+    
     
     var body: some View {
-        
+    
+                
         NavigationView {
             
             // APRESENTA A PLACEVIEW QUANDO PRESENT FOR TRUE
@@ -32,7 +36,7 @@ struct ContentView: View {
                                     Image(String(location.id))
                                         .resizable()
                                         .frame(width: 200, height: 200)
-                                    
+                                       
                                     
                                     Text(location.name)
                                         .font(.headline)
@@ -43,6 +47,15 @@ struct ContentView: View {
                                         .frame(width: 150, alignment: .leading)
                                         .foregroundColor(.gray)
                                         .padding()
+                                    
+                                    Section {
+                                        RatingView(rating: $rating2, label: $label1)
+                                            .offset(y: -10)
+                                            .padding(5)
+                                        
+                                    }
+                                   
+
                                     
                                     
                                 }// VStack
@@ -58,9 +71,7 @@ struct ContentView: View {
                                 present = true
                             }
                             
-                            
-                            
-                            
+                       
                         }
                     } //ForEach
                 }//ScrollView

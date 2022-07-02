@@ -16,6 +16,8 @@
 		998DCDDC2862226300D574D0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998DCDDB2862226300D574D0 /* ViewModel.swift */; };
 		998DCDDF2862867400D574D0 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998DCDDE2862867400D574D0 /* RatingView.swift */; };
 		998DE4042869FAD900438682 /* PlaceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998DE4032869FAD900438682 /* PlaceAPI.swift */; };
+		99DEBF04286FC2BE000D9223 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DEBF03286FC2BE000D9223 /* TabBarView.swift */; };
+		99DEBF06286FC4B8000D9223 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DEBF05286FC4B8000D9223 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		998DCDDB2862226300D574D0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		998DCDDE2862867400D574D0 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		998DE4032869FAD900438682 /* PlaceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAPI.swift; sourceTree = "<group>"; };
+		99DEBF03286FC2BE000D9223 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		99DEBF05286FC4B8000D9223 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			children = (
 				9979E50B286B480E009355D2 /* PlaceView.swift */,
 				99574B78286DFA0000773E3E /* TesteView.swift */,
+				99DEBF03286FC2BE000D9223 /* TabBarView.swift */,
+				99DEBF05286FC4B8000D9223 /* MapView.swift */,
 			);
 			path = VIEW;
 			sourceTree = "<group>";
@@ -170,10 +176,12 @@
 			files = (
 				9979E50C286B480E009355D2 /* PlaceView.swift in Sources */,
 				998DCDD02861F76700D574D0 /* ContentView.swift in Sources */,
+				99DEBF04286FC2BE000D9223 /* TabBarView.swift in Sources */,
 				998DCDDC2862226300D574D0 /* ViewModel.swift in Sources */,
 				99574B79286DFA0000773E3E /* TesteView.swift in Sources */,
 				998DCDCE2861F76700D574D0 /* SwiftUIAPICallsApp.swift in Sources */,
 				998DCDDF2862867400D574D0 /* RatingView.swift in Sources */,
+				99DEBF06286FC4B8000D9223 /* MapView.swift in Sources */,
 				998DE4042869FAD900438682 /* PlaceAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

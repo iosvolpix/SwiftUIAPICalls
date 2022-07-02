@@ -12,23 +12,33 @@ struct TesteView: View {
         HStack {
             VStack(alignment: .leading) {
                 
-                Image("3")
+                Image("2") // IMAGEM
                     .resizable()
-                    .scaledToFit()
-                
-                Text("Obrigatorio")
-                    .font(.headline)
-                    .foregroundColor(.blue)
-                    .frame(width: 150, alignment: .leading)
-                    .foregroundColor(.gray)
-                    .padding()
-                
-                Text("Comentario")
+                    .aspectRatio(contentMode: .fit)
+                    .offset(y: -250)
+
+                Text("Obrigatorio") // NOME PRICINPAL
                     .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .frame(width: 150, alignment: .leading)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.blue)
+                    .frame(width: 250, alignment: .leading)
                     .padding()
+                
+                Text("Sobre") // SOBRE
+                    .font(.subheadline)
+                    .padding()
+                
+                HStack {
+                Image(systemName: "phone.fill")
+                Text("Telefone") // TELEFONE
+                    .font(.subheadline)
+                    .padding()
+                }
+                HStack {
+                Image(systemName: "map.fill")
+                Text("Endereco") // ENDEREÇO
+                    .font(.subheadline)
+                    .padding()
+                }
                 
             }// VStack
          

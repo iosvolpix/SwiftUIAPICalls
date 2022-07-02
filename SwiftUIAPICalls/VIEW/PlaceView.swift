@@ -46,26 +46,38 @@ struct PlaceView: View {
                     Text(place.name) // NOME PRICINPAL
                         .font(.subheadline)
                         .foregroundColor(.blue)
-                        .frame(width: 150, alignment: .leading)
-                        .padding()
+                        .frame(width: 350, alignment: .leading)
+                        .offset(y: -100)
                     
                     Text(place.about) // SOBRE
                         .font(.subheadline)
+                        .offset(y: -100)
                         .padding()
-                  
-                    Text(place.phone) // TELEFONE
-                        .font(.subheadline)
-                        .padding()
+                
                     
-                    Text(place.adress) // ENDEREÇO
+                    HStack {
+                    Image(systemName: "phone.fill")
+                            .foregroundColor(.blue)
+                        Text(place.phone) // TELEFONE
+                            .font(.subheadline)
+                            .frame(width: 320, alignment: .leading)
+                            
+                            .padding()
+                    }.offset(y: -100)
+                        
+                    HStack {
+                    Image(systemName: "map.fill")
+                        .foregroundColor(.blue)
+                        Text(place.adress) // ENDEREÇO
                         .font(.subheadline)
+                    
                         .padding()
+                       
+                    }.offset(y: -100)
                     
                     
                 } // VStack
             } // HStack
-            .background(Color.white.opacity(0.09).edgesIgnoringSafeArea(.all))
-            .cornerRadius(10)
             .padding()
         } else {
             // Enquanto não carregar mostra esse texto
