@@ -41,40 +41,141 @@ struct PlaceView: View {
                     Image(String(place.id)) // IMAGEM
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .offset(y: -130)
+                        .offset(y: -250)
 
                     Text(place.name) // NOME PRICINPAL
                         .font(.subheadline)
+                        .fontWeight(.bold)
                         .foregroundColor(.blue)
                         .frame(width: 350, alignment: .leading)
-                        .offset(y: -100)
-                    
+                        .offset(y: -250)
+                        .padding()
+             
                     Text(place.about) // SOBRE
                         .font(.subheadline)
-                        .offset(y: -100)
+                        .offset(y: -250)
                         .padding()
+                        .foregroundColor(.gray)
                 
                     
                     HStack {
                     Image(systemName: "phone.fill")
+                            .offset(y: -250)
                             .foregroundColor(.blue)
+                            .frame(width: 100, alignment: .leading)
                         Text(place.phone) // TELEFONE
                             .font(.subheadline)
-                            .frame(width: 320, alignment: .leading)
-                            
+                            .frame(width: 250, alignment: .leading)
+                            .offset(y: -250)
                             .padding()
-                    }.offset(y: -100)
-                        
+                            
+                    }
                     HStack {
                     Image(systemName: "map.fill")
+                            .offset(y: -250)
                         .foregroundColor(.blue)
                         Text(place.adress) // ENDEREÇO
-                        .font(.subheadline)
-                    
-                        .padding()
+                            .font(.subheadline)
+                            .offset(y: -250)
+                            .padding()
                        
-                    }.offset(y: -100)
+                    }
+                        
+                    HStack {
+                    Image(systemName: "clock.fill")
+                            .offset(y: -250)
+                        .foregroundColor(.blue)
+                        Text(place.adress) // ENDEREÇO
+                            .font(.subheadline)
+                            .offset(y: -250)
+                            .padding()
+                       
+                
+                    }
+            
                     
+                    
+                    
+                    HStack {
+                        VStack {
+                    HStack {
+                            Image("f1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 200, height: 150, alignment: .leading)
+                                .clipShape(Circle())
+                  
+                        
+                            HStack {
+                                VStack {
+                            Text("Fantástico!!")
+                                .fontWeight(.bold)
+                                .frame(width: 200, alignment: .leading)
+                                .foregroundColor(.blue)
+                                .padding(1)
+                                Text("Tortas deliciosas. Os waffles também estavam muito bons. Equipe muito atenciosa")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                                .frame(width: 200, alignment: .leading)
+                                .foregroundColor(.gray)
+                                
+                                }
+                            
+                    }
+                    }.offset(y: -200)
+                            HStack {
+                                    Image("f2")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 200, height: 150, alignment: .leading)
+                                        .clipShape(Circle())
+                    
+                                    HStack {
+                                        VStack {
+                                    Text("Café da manhã delicoso")
+                                        .fontWeight(.bold)
+                                        .frame(width: 200, alignment: .leading)
+                                        .foregroundColor(.blue)
+                                        .padding(1)
+                                        Text("Nós fomos para o brunch e estava realmente delicioso. Pães, ovos, café sucos naturais. Não é muito barato mas vale a pena")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 200, alignment: .leading)
+                                        .foregroundColor(.gray)
+                                        
+                                        }
+                                    }
+                                
+                            
+                            }.offset(y: -200)
+                            HStack {
+                                    Image("f3")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 200, height: 150, alignment: .leading)
+                                        .clipShape(Circle())
+                    
+                                    HStack {
+                                        VStack {
+                                    Text("Delicoso")
+                                        .fontWeight(.bold)
+                                        .frame(width: 200, alignment: .leading)
+                                        .foregroundColor(.blue)
+                                        .padding(1)
+                                        Text("Delicioso. Não é muito barato mas vale a pena")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 200, alignment: .leading)
+                                        .foregroundColor(.gray)
+                                        
+                                        }
+                                    }
+                                
+                            
+                            }.offset(y: -200)
+                        }// VSTACK
+                    }
+                // HSTACK
                     
                 } // VStack
             } // HStack

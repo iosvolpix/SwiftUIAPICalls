@@ -20,23 +20,29 @@ struct TesteView: View {
                 Text("Obrigatorio") // NOME PRICINPAL
                     .font(.subheadline)
                     .foregroundColor(.blue)
-                    .frame(width: 250, alignment: .leading)
+                    .frame(width: 150, alignment: .leading)
+                    .offset(y: -250)
                     .padding()
                 
                 Text("Sobre") // SOBRE
                     .font(.subheadline)
+                    .offset(y: -250)
                     .padding()
                 
                 HStack {
                 Image(systemName: "phone.fill")
+                        .offset(y: -250)
                 Text("Telefone") // TELEFONE
                     .font(.subheadline)
+                    .offset(y: -250)
                     .padding()
                 }
                 HStack {
                 Image(systemName: "map.fill")
+                        .offset(y: -250)
                 Text("Endereco") // ENDEREÇO
                     .font(.subheadline)
+                    .offset(y: -250)
                     .padding()
                 }
                 

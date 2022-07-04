@@ -35,12 +35,15 @@ struct ContentView: View {
                                     
                                     Image(String(location.id))
                                         .resizable()
-                                        .frame(width: 200, height: 200)
+                                        .frame(width: 180, height: 180)
+                                        
                                        
                                     
                                     Text(location.name)
                                         .font(.headline)
                                         .frame(width: 150, alignment: .leading)
+                                        .padding(-5)
+                                        .offset(y: 10)
                                     
                                     Text(location.type)
                                         .font(.subheadline)
@@ -49,9 +52,10 @@ struct ContentView: View {
                                         .padding()
                                     
                                     Section {
+                                        
                                         RatingView(rating: $rating2, label: $label1)
                                             .offset(y: -10)
-                                            .padding(5)
+                                            .padding(2)
                                         
                                     }
                                    
